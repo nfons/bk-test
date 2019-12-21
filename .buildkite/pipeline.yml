@@ -8,3 +8,5 @@ steps:
         default: "Release #"
   - label: "test2"
     command: 'buildkite-agent meta-data get "release-name"'
+    agents:
+    - "queue=discoball"
