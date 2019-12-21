@@ -7,4 +7,4 @@ steps:
         required: false
         default: "Release #"
   - label: "test2"
-    command: buildkite-agent meta-data get "release-name"
+    command: 'buildkite-agent meta-data get "release-name"'
