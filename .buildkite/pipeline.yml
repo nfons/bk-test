@@ -6,9 +6,15 @@ steps:
         hint: "What’s the code name for this release? :name_badge:"
         required: true
         default: "Release #"
-  - command: "echo 'hello'"
-    label: ":pipeline:"
+  - command:
+    - "sleep 2m"
+    - "echo 'hello'
+    label: ":clown:"
     agents:
-    - "queue=discoball"
+    - "queue=discoball"'
+  - command: "echo 'too'
+    label: ":car:"
+    agents:
+    - "queue=discoball"'
 
 
