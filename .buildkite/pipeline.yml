@@ -11,8 +11,8 @@ steps:
     - "echo 'hello'
     label: ":clown:"
     agents:
-    - "queue=discoball"'
-  - command: "echo 'too'
+    - "queue=discoball"
+  - command: "echo 'too'"
     label: ":car:"
     agents:
     - "queue=discoball"'
