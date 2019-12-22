@@ -15,6 +15,6 @@ steps:
   - command: "echo 'too'"
     label: ":car:"
     agents:
-    - "queue=discoball"'
+    - "queue=discoball"
 
 
