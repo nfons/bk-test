@@ -10,3 +10,7 @@ steps:
     command: 'buildkite-agent meta-data get "release-name"'
     agents:
     - "queue=discoball"
+ - label: "test3"
+    command: 'buildkite-agent meta-data get "release-name"'
+    agents:
+    - "queue=discoball"
