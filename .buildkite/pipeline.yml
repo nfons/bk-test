@@ -8,7 +8,7 @@ steps:
         default: "Release #"
   - command:
     - "sleep 2m"
-    - "echo 'hello'
+    - "echo 'hello'"
     label: ":clown:"
     agents:
     - "queue=discoball"
