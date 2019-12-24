@@ -19,3 +19,10 @@ steps:
           propagate-environment: true
     agents:
       - "queue=discoball"
+  - command:
+      - 'export VERSION=$(buildkite-agent meta-data get "release-version")'
+      - 'echo ${VERSION}'
+      - buildkite-agent meta-data get "release-version"
+    agents:
+      - "queue=discoball"
+      
