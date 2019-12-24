@@ -7,7 +7,7 @@ steps:
         required: true
         default: "13.5.1"
   - command:
-      - 'export VERSION=$(buildkite-agent meta-data get "release-version")'
+      - 'VERSION=$(buildkite-agent meta-data get "release-version")'
       - 'echo ${VERSION}'
       - buildkite-agent meta-data get "release-version"
     label: "Bizflow :moneybag:"
