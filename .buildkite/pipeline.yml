@@ -8,7 +8,8 @@ steps:
         default: "13.5.1"
   - command:
       - 'export VERSION=$(buildkite-agent meta-data get "release-version")'
-      - 'echo $VERSION'
+      - 'echo ${VERSION}'
+      - buildkite-agent meta-data get "release-version"
     label: "Bizflow :moneybag:"
     plugins:
       - ssh://git@github.com/buildkite-plugins/docker-buildkite-plugin#v3.2.0:
