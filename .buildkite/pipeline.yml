@@ -1,20 +1,19 @@
 steps:
   - block: "Request Release"
     fields:
-      - text: "Code Name"
-        key: "release-name"
-        hint: "What’s the code name for this release? :name_badge:"
+      - text: "ar-ad-manager version"
+        key: "release-version"
+        hint: "What’s the ar-ad-manager version number? :name_badge:"
         required: true
-        default: "Release #"
+        default: "13.5.1"
   - command:
-    - "sleep 2m"
-    - "echo 'hello'"
-    label: ":clown:"
+      - 'node --version'
+    label: "Bizflow :moneybag:"
+    plugins:
+      - ssh://git@github.com/buildkite-plugins/docker-buildkite-plugin#v3.2.0:
+          image: "node:8"
+          workdir: /app
+          mount-ssh-agent: true
+          propagate-environment: true
     agents:
-    - "queue=discoball"
-  - command: "echo 'too'"
-    label: ":car:"
-    agents:
-    - "queue=discoball"
-
-
+      - "queue=discoball"
